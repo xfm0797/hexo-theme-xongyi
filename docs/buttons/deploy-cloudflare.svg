@@ -1,0 +1,9 @@
+<svg width="179" height="32" viewBox="0 0 179 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="179" height="32" rx="6" fill="#F38020"/>
+  <g fill="#fff">
+    <circle cx="19" cy="18.4" r="4.6"/>
+    <circle cx="25.4" cy="16.2" r="6"/>
+    <rect x="15.5" y="18" width="12.5" height="6.4" rx="3.2"/>
+  </g>
+  <text x="40" y="21.5" font-family="Helvetica, Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="12.5" font-weight="700" fill="#ffffff" letter-spacing=".2">Deploy to Cloudflare</text>
+</svg>

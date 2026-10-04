@@ -39,8 +39,8 @@
 | 平台 | 部署按钮 |
 | --- | --- |
 | Netlify | [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/xfm0797/hexo-theme-xongyi) |
-| Vercel | [Deploy to Vercel](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fxfm0797%2Fhexo-theme-xongyi) |
-| Cloudflare | [Deploy to Cloudflare](https://deploy.workers.cloudflare.com/?url=https://github.com/xfm0797/hexo-theme-xongyi) |
+| Vercel | [![Deploy to Vercel](docs/buttons/deploy-vercel.svg)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fxfm0797%2Fhexo-theme-xongyi) |
+| Cloudflare | [![Deploy to Cloudflare](docs/buttons/deploy-cloudflare.svg)](https://deploy.workers.cloudflare.com/?url=https://github.com/xfm0797/hexo-theme-xongyi) |
 
 > **GitHub Pages**：仓库自带 `.github/workflows/pages.yml`，push 到 `main` 即自动构建发布（需在仓库 Settings → Pages 中将 Source 设为 **GitHub Actions**）。
 >
@@ -81,18 +81,19 @@ preset: education    # 教育（学院青）
 
 ```yaml
 sections:
-  - hero        # 首屏横幅
-  - quicklinks  # 快捷入口（政务/校园常用）
-  - stats       # 数据统计（数字滚动动画）
-  - services    # 核心业务
-  - about       # 关于我们
-  - products    # 产品与案例
-  - news        # 新闻动态（自动取最新文章）
-  - team        # 团队 / 名师风采
-  - partners    # 合作伙伴
-  - gallery     # 风采图库
-  - cta         # 行动号召条
-  - contact     # 联系我们
+  - hero            # 首屏横幅
+  - quicklinks      # 快捷入口（政务/校园常用）
+  - stats           # 数据统计（数字滚动动画）
+  - services        # 核心业务
+  - about           # 关于我们
+  - products        # 产品与案例
+  - news            # 新闻动态（自动取最新文章）
+  - team            # 团队 / 名师风采
+  - partners        # 合作伙伴
+  - gallery         # 风采图库
+  - cta             # 行动号召条
+  - contact         # 联系我们
+  - about-contact   # 关于我们 + 联系我们 左右合排（一屏收尾）
 ```
 
 删除任意一行即隐藏该板块；调整顺序即调整首页结构。每个板块的数据（标题、副标题、条目、图标、链接）都在 `_config.yml` 对应节点下配置。
