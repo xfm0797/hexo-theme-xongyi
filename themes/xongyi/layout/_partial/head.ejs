@@ -1,0 +1,67 @@
+<%
+var seo = theme.seo || {};
+var brand = theme.brand || {};
+var pageTitle = page.title ? page.title + ' | ' + config.title : config.title;
+var pageDesc = page.description || page.excerpt ? strip_html(page.excerpt || page.description) : (seo.description || config.description || '');
+if (page.excerpt) pageDesc = strip_html(page.excerpt).trim();
+if (page.title && seo.description) pageDesc = seo.description;
+pageDesc = (pageDesc || '').replace(/\n/g, ' ').substring(0, 160);
+var pageKeywords = seo.keywords || config.keywords || '';
+var ogImage = page.cover || (brand.logo ? url_for(brand.logo) : '');
+%>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title><%= pageTitle %></title>
+  <meta name="description" content="<%= pageDesc %>">
+  <meta name="keywords" content="<%= pageKeywords %>">
+  <meta name="author" content="<%= config.author || '' %>">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="renderer" content="webkit">
+  <meta name="theme-color" content="#2563eb">
+  <% if (brand.favicon) { %>
+  <link rel="icon" type="image/svg+xml" href="<%- url_for(brand.favicon) %>">
+  <% } %>
+  <link rel="canonical" href="<%- config.url %>/<%= page.path %>">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="<%= page.type || 'website' %>">
+  <meta property="og:title" content="<%= pageTitle %>">
+  <meta property="og:description" content="<%= pageDesc %>">
+  <meta property="og:url" content="<%- config.url %>/<%= page.path %>">
+  <meta property="og:site_name" content="<%= config.title %>">
+  <% if (ogImage) { %>
+  <meta property="og:image" content="<%- ogImage %>">
+  <% } %>
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="<%= ogImage ? 'summary_large_image' : 'summary' %>">
+  <meta name="twitter:title" content="<%= pageTitle %>">
+  <meta name="twitter:description" content="<%= pageDesc %>">
+
+  <% if (seo.jsonld !== false) { %>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": <%- JSON.stringify(config.title) %>,
+    "url": <%- JSON.stringify(config.url) %>,
+    "description": <%- JSON.stringify(pageDesc) %><% if (theme.contact && theme.contact.phone) { %>,
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": <%- JSON.stringify(theme.contact.phone) %>,
+      "contactType": "customer service"
+    }<% } %>
+  }
+  </script>
+  <% } %>
+
+  <link rel="stylesheet" href="<%- url_for('css/style.css') %>">
+  <script>
+    (function () {
+      var t = 'light';
+      try { t = localStorage.getItem('xongyi-theme') || 'light'; } catch (e) {}
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>

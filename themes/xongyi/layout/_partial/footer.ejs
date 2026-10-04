@@ -1,0 +1,70 @@
+<%
+var footer = theme.footer || {};
+var social = theme.social || [];
+var icp = footer.icp || '';
+var year = new Date().getFullYear();
+%>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <a class="brand brand--footer" href="<%- url_for('/') %>">
+          <% if (theme.brand.logo) { %>
+          <img class="brand__logo" src="<%- url_for(theme.brand.logo) %>" alt="<%= theme.brand.name %>">
+          <% } %>
+          <span class="brand__name"><%= theme.brand.name %></span>
+        </a>
+        <% if (theme.brand.slogan) { %><p class="footer-slogan"><%= theme.brand.slogan %></p><% } %>
+        <% if (footer.about) { %><p class="footer-about"><%= footer.about %></p><% } %>
+        <% if (social.length) { %>
+        <div class="footer-social">
+          <% social.forEach(function (s) { %>
+          <a href="<%- s.url %>" target="_blank" rel="noopener" aria-label="<%= s.icon %>" title="<%= s.icon %>"><%- icon(s.icon) %></a>
+          <% }) %>
+        </div>
+        <% } %>
+      </div>
+
+      <% (footer.columns || []).forEach(function (col) { %>
+      <div class="footer-col">
+        <h4><%= col.title %></h4>
+        <ul>
+          <% (col.items || []).forEach(function (item) { %>
+          <li><a href="<%- url_for(item.url) %>"><%= item.name %></a></li>
+          <% }) %>
+        </ul>
+      </div>
+      <% }) %>
+
+      <% if (theme.contact && (theme.contact.phone || theme.contact.email)) { %>
+      <div class="footer-col">
+        <h4><%= __('contact_us') %></h4>
+        <ul class="footer-contact">
+          <% if (theme.contact.address) { %><li><%- icon('map-pin') %><span><%= theme.contact.address %></span></li><% } %>
+          <% if (theme.contact.phone) { %><li><%- icon('phone') %><span><%= theme.contact.phone %></span></li><% } %>
+          <% if (theme.contact.email) { %><li><%- icon('mail') %><span><%= theme.contact.email %></span></li><% } %>
+          <% if (theme.contact.hours) { %><li><%- icon('clock') %><span><%= theme.contact.hours %></span></li><% } %>
+        </ul>
+      </div>
+      <% } %>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copyright">
+        <% if (footer.copyright) { %><%= footer.copyright %><% } else { %>© <%= year %> <%= config.title %><% } %>
+        <% if (icp) { %>
+        &nbsp;·&nbsp;<a href="<%- footer.icp_url || 'https://beian.miit.gov.cn/' %>" target="_blank" rel="noopener"><%= icp %></a>
+        <% } %>
+        <% if (footer.police) { %>
+        &nbsp;·&nbsp;<a href="<%- footer.police_url || '#' %>" target="_blank" rel="noopener"><%= footer.police %></a>
+        <% } %>
+      </p>
+      <% if (footer.show_powered !== false) { %>
+      <p class="footer-powered">
+        <a href="https://hexo.io" target="_blank" rel="noopener"><%= __('powered_by') %></a>
+        &nbsp;·&nbsp;<%= __('theme_by') %> <a class="dev-link" href="https://www.lovou.pw" target="_blank" rel="noopener">XFM</a>
+      </p>
+      <% } %>
+    </div>
+  </div>
+</footer>

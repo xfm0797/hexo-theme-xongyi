@@ -1,0 +1,14 @@
+<section class="section stats" id="stats">
+  <div class="container">
+    <div class="stats__grid">
+      <% (theme.stats.items || []).forEach(function (item) { %>
+      <div class="stat reveal">
+        <div class="stat__value">
+          <span class="stat__number" data-count="<%= item.value %>">0</span><span class="stat__suffix"><%= item.suffix || '' %></span>
+        </div>
+        <div class="stat__label"><%= item.label %></div>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+</section>

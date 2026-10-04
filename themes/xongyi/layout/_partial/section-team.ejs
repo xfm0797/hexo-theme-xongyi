@@ -1,0 +1,22 @@
+<section class="section" id="team">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2><%= theme.team.title %></h2>
+      <% if (theme.team.subtitle) { %><p><%= theme.team.subtitle %></p><% } %>
+    </div>
+    <div class="team__grid">
+      <% (theme.team.items || []).forEach(function (m) { %>
+      <div class="team-card reveal">
+        <% if (m.avatar) { %>
+        <img class="team-card__avatar" src="<%- url_for(m.avatar) %>" alt="<%= m.name %>" loading="lazy">
+        <% } else { %>
+        <span class="team-card__avatar team-card__avatar--text"><%= m.name ? m.name.charAt(0) : '?' %></span>
+        <% } %>
+        <h3><%= m.name %></h3>
+        <% if (m.role) { %><span class="team-card__role"><%= m.role %></span><% } %>
+        <% if (m.desc) { %><p><%= m.desc %></p><% } %>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+</section>

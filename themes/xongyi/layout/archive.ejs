@@ -1,0 +1,24 @@
+<section class="page-hero">
+  <div class="container">
+    <h1><%= __('archives') %></h1>
+    <% if (page.current && page.total > 1) { %><p class="page-hero__subtitle"><%= __('page_no', page.current) %></p><% } %>
+  </div>
+</section>
+<div class="container page-content">
+  <% if (page.posts && page.posts.length) { %>
+  <ul class="archive-list">
+    <% page.posts.forEach(function (post) { %>
+    <li class="archive-item reveal">
+      <span class="archive-item__date"><%= date(post.date, 'MM-DD') %></span>
+      <a class="archive-item__title" href="<%- url_for(post.path) %>"><%= post.title %></a>
+      <% if (post.categories && post.categories.length) { %>
+      <span class="archive-item__cat"><%= post.categories.first().name %></span>
+      <% } %>
+    </li>
+    <% }) %>
+  </ul>
+  <%- partial('_partial/pagination') %>
+  <% } else { %>
+  <p class="empty-tip"><%= __('no_posts') %></p>
+  <% } %>
+</div>

@@ -1,0 +1,19 @@
+<section class="section section--tint about" id="about">
+  <div class="container about__inner">
+    <div class="about__media reveal">
+      <% if (theme.about.image) { %>
+      <img src="<%- url_for(theme.about.image) %>" alt="<%= theme.about.title %>" loading="lazy">
+      <% } %>
+    </div>
+    <div class="about__content reveal">
+      <div class="section-head section-head--left">
+        <h2><%= theme.about.title %></h2>
+        <% if (theme.about.subtitle) { %><p><%= theme.about.subtitle %></p><% } %>
+      </div>
+      <div class="about__text"><%- theme.about.content %></div>
+      <% if (theme.about.link && theme.about.link.name) { %>
+      <a class="btn btn--primary" href="<%- url_for(theme.about.link.url) %>"><%= theme.about.link.name %><%- icon('arrow-right') %></a>
+      <% } %>
+    </div>
+  </div>
+</section>

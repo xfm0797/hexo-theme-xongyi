@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="<%= config.language || 'zh-CN' %>">
+<%- partial('_partial/head') %>
+<body class="preset-<%= theme.preset || 'enterprise' %>">
+<a class="skip-link" href="#main"><%= __('skip_to_content') %></a>
+<%- partial('_partial/header') %>
+<main id="main"><%- body %></main>
+<%- partial('_partial/footer') %>
+<% if (theme.features && theme.features.back_to_top) { %>
+<button id="back-to-top" class="back-to-top" aria-label="<%= __('back_to_top') %>" title="<%= __('back_to_top') %>"><%- icon('chevron-up') %></button>
+<% } %>
+<%- partial('_partial/scripts') %>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="640" height="480" role="img" aria-label="About illustration">
+  <defs>
+    <linearGradient id="abg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef4ff"/>
+      <stop offset="1" stop-color="#dceafe"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="480" rx="28" fill="url(#abg)"/>
+  <circle cx="580" cy="60" r="80" fill="#c3d9fb" opacity=".55"/>
+  <!-- 建筑 -->
+  <rect x="150" y="150" width="150" height="230" rx="10" fill="#2563eb"/>
+  <g fill="#bfdbfe">
+    <rect x="170" y="172" width="24" height="24" rx="4"/><rect x="212" y="172" width="24" height="24" rx="4"/><rect x="254" y="172" width="24" height="24" rx="4"/>
+    <rect x="170" y="216" width="24" height="24" rx="4"/><rect x="212" y="216" width="24" height="24" rx="4"/><rect x="254" y="216" width="24" height="24" rx="4"/>
+    <rect x="170" y="260" width="24" height="24" rx="4"/><rect x="212" y="260" width="24" height="24" rx="4"/><rect x="254" y="260" width="24" height="24" rx="4"/>
+  </g>
+  <rect x="204" y="320" width="42" height="60" rx="6" fill="#1d4ed8"/>
+  <!-- 侧楼 -->
+  <rect x="312" y="220" width="110" height="160" rx="10" fill="#3b82f6" opacity=".9"/>
+  <g fill="#dbeafe">
+    <rect x="330" y="240" width="20" height="20" rx="4"/><rect x="362" y="240" width="20" height="20" rx="4"/><rect x="394" y="240" width="20" height="20" rx="4"/>
+    <rect x="330" y="276" width="20" height="20" rx="4"/><rect x="362" y="276" width="20" height="20" rx="4"/><rect x="394" y="276" width="20" height="20" rx="4"/>
+  </g>
+  <!-- 云 -->
+  <g fill="#ffffff" opacity=".9">
+    <ellipse cx="120" cy="90" rx="42" ry="18"/><ellipse cx="150" cy="80" rx="30" ry="15"/>
+    <ellipse cx="480" cy="120" rx="36" ry="15"/><ellipse cx="506" cy="112" rx="24" ry="12"/>
+  </g>
+  <!-- 地面 -->
+  <rect x="110" y="380" width="420" height="10" rx="5" fill="#b7d0f6"/>
+  <circle cx="520" cy="330" r="34" fill="#ffffff" opacity=".85"/>
+  <path d="M506 331l10 10 18-20" stroke="#2563eb" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

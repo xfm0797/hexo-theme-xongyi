@@ -1,0 +1,25 @@
+<section class="hero" id="hero">
+  <div class="container hero__inner<%= theme.hero.image ? '' : ' hero__inner--center' %>">
+    <div class="hero__content reveal">
+      <% if (theme.hero.badge) { %>
+      <span class="hero__badge"><%- icon('zap') %><%= theme.hero.badge %></span>
+      <% } %>
+      <h1 class="hero__title"><%- theme.hero.title %></h1>
+      <% if (theme.hero.subtitle) { %>
+      <p class="hero__subtitle"><%= theme.hero.subtitle %></p>
+      <% } %>
+      <% if (theme.hero.buttons && theme.hero.buttons.length) { %>
+      <div class="hero__actions">
+        <% theme.hero.buttons.forEach(function (btn) { %>
+        <a class="btn <%= btn.primary ? 'btn--primary' : 'btn--ghost' %>" href="<%- url_for(btn.url) %>"><%= btn.name %><%- icon('arrow-right') %></a>
+        <% }) %>
+      </div>
+      <% } %>
+    </div>
+    <% if (theme.hero.image) { %>
+    <div class="hero__media reveal">
+      <img src="<%- url_for(theme.hero.image) %>" alt="" loading="eager">
+    </div>
+    <% } %>
+  </div>
+</section>

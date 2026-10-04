@@ -1,0 +1,80 @@
+# ============================================================
+# Hexo 站点配置（Xongyi 主题演示站）
+# 主题文档: https://github.com/xfm0797/hexo-theme-xongyi
+# 主题配置文件: themes/xongyi/_config.yml
+# ============================================================
+
+title: "Xongyi 演示站"
+subtitle: ""
+description: "Xongyi - Hexo 通用企业官网主题，支持政府/企业/教育多套功能布局，一键部署至 GitHub Pages、Cloudflare、EdgeOne、Vercel、Netlify。"
+keywords: "Hexo,企业官网,Hexo主题,政务网站,学校网站,Xongyi"
+author: "XFM"
+language: "zh-CN"
+timezone: "Asia/Shanghai"
+
+url: "https://example.com"
+root: "/"
+permalink: ":year/:month/:day/:title/"
+pretty_urls:
+  trailing_index: true
+  trailing_html: true
+
+# 目录
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+i18n_dir: ":lang"
+
+# 写作
+new_post_name: ":year-:month-:day-:title.md"
+default_layout: "post"
+titlecase: false
+external_link:
+  enable: true
+  field: "site"
+  exclude: ""
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+syntax_highlighter: highlight.js
+highlight:
+  line_number: true
+  auto_detect: false
+  tab_replace: ""
+  wrap: true
+  hljs: false
+
+# 首页文章分页
+index_generator:
+  path: ""
+  per_page: 6
+  order_by: "-date"
+
+# 分类 & 标签
+default_category: "uncategorized"
+category_map:
+tag_map:
+
+# 日期 / 时间格式
+date_format: "YYYY-MM-DD"
+time_format: "HH:mm:ss"
+updated_option: "mtime"
+
+# 分页
+per_page: 6
+pagination_dir: "page"
+
+# 主题
+theme: "xongyi"
+
+meta_generator: true
+
+# 本地服务器
+server:
+  port: 4000
+  compress: true
+  header: true

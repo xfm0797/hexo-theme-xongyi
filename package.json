@@ -1,0 +1,43 @@
+{
+  "name": "hexo-theme-xongyi",
+  "version": "1.0.0",
+  "description": "Xongyi - Hexo 通用企业官网主题（政府/企业/教育多套布局），支持 GitHub Pages / Cloudflare Pages / EdgeOne Pages / Vercel / Netlify 一键部署",
+  "private": true,
+  "scripts": {
+    "build": "hexo generate",
+    "clean": "hexo clean",
+    "server": "hexo server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xfm0797/hexo-theme-xongyi"
+  },
+  "keywords": [
+    "hexo",
+    "hexo-theme",
+    "enterprise",
+    "corporate",
+    "website",
+    "government",
+    "education"
+  ],
+  "author": "XFM (https://www.lovou.pw)",
+  "license": "MIT",
+  "homepage": "https://www.lovou.pw",
+  "hexo": {
+    "version": "7.3.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "hexo": "^7.3.0",
+    "hexo-generator-archive": "^2.0.0",
+    "hexo-generator-category": "^2.0.0",
+    "hexo-generator-index": "^3.0.0",
+    "hexo-generator-tag": "^2.0.0",
+    "hexo-renderer-ejs": "^2.0.0",
+    "hexo-renderer-marked": "^6.3.0",
+    "hexo-server": "^3.0.0"
+  }
+}

@@ -1,0 +1,10 @@
+<%# layout: news 页面 — 全部文章列表 %>
+<section class="page-hero">
+  <div class="container">
+    <h1><%= page.title %></h1>
+    <% if (page.subtitle) { %><p class="page-hero__subtitle"><%= page.subtitle %></p><% } %>
+  </div>
+</section>
+<div class="container page-content">
+  <%- partial('_partial/post-grid', { posts: site.posts.sort('date', -1) }) %>
+</div>

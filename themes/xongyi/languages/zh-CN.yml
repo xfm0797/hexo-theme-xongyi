@@ -1,0 +1,33 @@
+zh-CN:
+  home: 首页
+  read_more: 阅读全文
+  view_all: 查看全部
+  archives: 归档
+  categories: 分类
+  tags: 标签
+  prev_post: 上一篇
+  next_post: 下一篇
+  prev_page: 上一页
+  next_page: 下一页
+  page_no: 第 %s 页
+  no_posts: 暂无内容
+  skip_to_content: 跳转到主要内容
+  powered_by: 由 Hexo 强力驱动
+  theme_by: 主题 Xongyi
+  dark_mode: 切换暗色模式
+  light_mode: 切换亮色模式
+  back_to_top: 返回顶部
+  posted_on: 发布于
+  copyright: 版权所有
+  contact_us: 联系我们
+  address: 地址
+  phone: 电话
+  email: 邮箱
+  work_hours: 服务时间
+  wechat: 微信
+  your_name: 您的姓名
+  your_email: 您的邮箱
+  your_message: 请描述您的需求
+  send: 发送
+  toc: 目录
+  latest_posts: 最新文章

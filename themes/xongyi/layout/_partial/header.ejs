@@ -1,0 +1,46 @@
+<%
+var features = theme.features || {};
+var currentPath = '/' + (page.path || '');
+currentPath = currentPath.replace(/\/index\.html$/, '/').replace(/\/$/, '') + '/';
+var root = url_for('/');
+if (root.slice(-1) !== '/') root += '/';
+%>
+<header id="header" class="site-header<%= features.sticky_header === false ? '' : ' site-header--sticky' %>">
+  <div class="container header-inner">
+    <a class="brand" href="<%- url_for('/') %>" aria-label="<%= theme.brand.name %>">
+      <% if (theme.brand.logo) { %>
+      <img class="brand__logo" src="<%- url_for(theme.brand.logo) %>" alt="<%= theme.brand.name %>">
+      <% } %>
+      <span class="brand__name"><%= theme.brand.name %></span>
+    </a>
+
+    <nav class="site-nav" id="site-nav" aria-label="main navigation">
+      <ul>
+        <% (theme.menu || []).forEach(function (item) {
+          var itemUrl = url_for(item.url);
+          var normalized = itemUrl.replace(/\/$/, '') + '/';
+          var active = normalized === root && currentPath === root;
+          if (!active && normalized !== root && currentPath.indexOf(normalized) === 0) active = true;
+        %>
+        <li><a href="<%- itemUrl %>" class="<%= active ? 'active' : '' %>"><%= item.name %></a></li>
+        <% }) %>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <% if (features.dark_mode) { %>
+      <button id="theme-toggle" class="icon-btn" aria-label="<%= __('dark_mode') %>" title="<%= __('dark_mode') %>">
+        <span class="icon-btn__moon"><%- icon('moon') %></span>
+        <span class="icon-btn__sun"><%- icon('sun') %></span>
+      </button>
+      <% } %>
+      <% if (theme.nav_button && theme.nav_button.name) { %>
+      <a class="btn btn--primary btn--sm nav-cta" href="<%- url_for(theme.nav_button.url) %>"><%= theme.nav_button.name %></a>
+      <% } %>
+      <button id="nav-toggle" class="nav-toggle icon-btn" aria-label="menu" aria-expanded="false">
+        <span class="nav-toggle__open"><%- icon('menu') %></span>
+        <span class="nav-toggle__close"><%- icon('x') %></span>
+      </button>
+    </div>
+  </div>
+</header>

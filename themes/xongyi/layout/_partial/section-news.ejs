@@ -1,0 +1,14 @@
+<section class="section section--tint" id="news">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2><%= theme.news.title %></h2>
+      <% if (theme.news.subtitle) { %><p><%= theme.news.subtitle %></p><% } %>
+    </div>
+    <%- partial('post-grid', { posts: site.posts.sort('date', -1).limit(theme.news.count || 3) }) %>
+    <% if (theme.news.more && theme.news.more.name) { %>
+    <div class="section-more reveal">
+      <a class="btn btn--ghost" href="<%- url_for(theme.news.more.url) %>"><%= theme.news.more.name %><%- icon('arrow-right') %></a>
+    </div>
+    <% } %>
+  </div>
+</section>

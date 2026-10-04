@@ -1,0 +1,44 @@
+<article class="post">
+  <section class="page-hero">
+    <div class="container">
+      <div class="post-meta">
+        <span><%- icon('calendar') %><%= __('posted_on') %> <%= date(page.date, 'YYYY-MM-DD') %></span>
+        <% if (page.categories && page.categories.length) { %>
+        <span><%- icon('folder') %>
+          <% page.categories.forEach(function (cat, i) { %>
+          <a href="<%- url_for('categories/' + cat.slug + '/') %>"><%= cat.name %></a><%= i < page.categories.length - 1 ? ' / ' : '' %>
+          <% }) %>
+        </span>
+        <% } %>
+      </div>
+      <h1><%= page.title %></h1>
+    </div>
+  </section>
+  <div class="container page-content post-content reveal">
+    <%- page.content %>
+    <% if (page.tags && page.tags.length) { %>
+    <div class="post-tags">
+      <%- icon('tag') %>
+      <% page.tags.forEach(function (tag) { %>
+      <a href="<%- url_for('tags/' + tag.slug + '/') %>">#<%= tag.name %></a>
+      <% }) %>
+    </div>
+    <% } %>
+  </div>
+  <% if (page.prev || page.next) { %>
+  <nav class="container post-nav">
+    <% if (page.prev) { %>
+    <a class="post-nav__item post-nav__prev" href="<%- url_for(page.prev.path) %>">
+      <span><%= __('prev_post') %></span>
+      <strong><%= page.prev.title %></strong>
+    </a>
+    <% } else { %><span class="post-nav__item"></span><% } %>
+    <% if (page.next) { %>
+    <a class="post-nav__item post-nav__next" href="<%- url_for(page.next.path) %>">
+      <span><%= __('next_post') %></span>
+      <strong><%= page.next.title %></strong>
+    </a>
+    <% } else { %><span class="post-nav__item"></span><% } %>
+  </nav>
+  <% } %>
+</article>

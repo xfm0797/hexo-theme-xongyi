@@ -1,0 +1,33 @@
+<%
+// 文章卡片网格 partial
+// 参数: posts (warehouse query/array), show_more(bool)
+%>
+<% if (!posts || !posts.length) { %>
+<p class="empty-tip"><%= __('no_posts') %></p>
+<% } else { %>
+<div class="post-grid">
+  <% posts.forEach(function (post) { %>
+  <article class="post-card reveal">
+    <a class="post-card__cover" href="<%- url_for(post.path) %>">
+      <% if (post.cover) { %>
+      <img src="<%- url_for(post.cover) %>" alt="<%= post.title %>" loading="lazy">
+      <% } else { %>
+      <span class="post-card__placeholder"><%- icon('image') %></span>
+      <% } %>
+    </a>
+    <div class="post-card__body">
+      <div class="post-card__meta">
+        <span class="post-card__date"><%- icon('calendar') %><%= date(post.date, 'YYYY-MM-DD') %></span>
+        <% if (post.categories && post.categories.length) { %>
+        <span class="post-card__cat"><%- icon('folder') %><%= post.categories.first().name %></span>
+        <% } %>
+      </div>
+      <h3 class="post-card__title"><a href="<%- url_for(post.path) %>"><%= post.title %></a></h3>
+      <% var desc = post.excerpt ? strip_html(post.excerpt).trim() : strip_html(post.content || '').trim(); %>
+      <% if (desc) { %><p class="post-card__excerpt"><%= desc.substring(0, 80) %><%= desc.length > 80 ? '…' : '' %></p><% } %>
+      <a class="post-card__more" href="<%- url_for(post.path) %>"><%= __('read_more') %><%- icon('arrow-right') %></a>
+    </div>
+  </article>
+  <% }) %>
+</div>
+<% } %>

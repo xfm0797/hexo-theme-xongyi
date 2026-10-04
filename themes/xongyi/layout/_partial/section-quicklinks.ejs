@@ -1,0 +1,16 @@
+<section class="section section--tint quicklinks" id="quicklinks">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2><%= theme.quicklinks.title %></h2>
+      <% if (theme.quicklinks.subtitle) { %><p><%= theme.quicklinks.subtitle %></p><% } %>
+    </div>
+    <div class="quicklinks__grid">
+      <% (theme.quicklinks.items || []).forEach(function (item) { %>
+      <a class="quicklink reveal" href="<%- url_for(item.url) %>">
+        <span class="quicklink__icon"><%- icon(item.icon || 'arrow-right') %></span>
+        <span class="quicklink__name"><%= item.name %></span>
+      </a>
+      <% }) %>
+    </div>
+  </div>
+</section>

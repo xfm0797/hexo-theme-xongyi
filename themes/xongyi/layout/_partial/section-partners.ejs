@@ -1,0 +1,19 @@
+<section class="section section--tint" id="partners">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2><%= theme.partners.title %></h2>
+      <% if (theme.partners.subtitle) { %><p><%= theme.partners.subtitle %></p><% } %>
+    </div>
+    <div class="partners__grid">
+      <% (theme.partners.items || []).forEach(function (p) { %>
+      <div class="partner reveal">
+        <% if (p.logo) { %>
+        <img src="<%- url_for(p.logo) %>" alt="<%= p.name %>" loading="lazy">
+        <% } else { %>
+        <span><%- icon('briefcase') %><%= p.name %></span>
+        <% } %>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+</section>

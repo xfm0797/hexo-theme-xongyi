@@ -1,0 +1,20 @@
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2><%= theme.services.title %></h2>
+      <% if (theme.services.subtitle) { %><p><%= theme.services.subtitle %></p><% } %>
+    </div>
+    <div class="services__grid">
+      <% (theme.services.items || []).forEach(function (item) { %>
+      <div class="service-card reveal">
+        <span class="service-card__icon"><%- icon(item.icon || 'star') %></span>
+        <h3><%= item.title %></h3>
+        <p><%= item.desc %></p>
+        <% if (item.url) { %>
+        <a class="service-card__link" href="<%- url_for(item.url) %>"><%= __('view_all') %><%- icon('arrow-right') %></a>
+        <% } %>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+</section>

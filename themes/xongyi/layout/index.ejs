@@ -1,0 +1,7 @@
+<%# 首页：按 theme.sections 配置的顺序渲染各板块 %>
+<% (theme.sections || []).forEach(function (name) {
+  var conf = theme[name];
+  if (!conf || conf.enable === false) return;
+%>
+<%- partial('_partial/section-' + name) %>
+<% }) %>

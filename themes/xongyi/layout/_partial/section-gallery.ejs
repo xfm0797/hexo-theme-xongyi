@@ -1,0 +1,18 @@
+<section class="section" id="gallery">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2><%= theme.gallery.title %></h2>
+      <% if (theme.gallery.subtitle) { %><p><%= theme.gallery.subtitle %></p><% } %>
+    </div>
+    <div class="gallery__grid">
+      <% (theme.gallery.items || []).forEach(function (g) { %>
+      <figure class="gallery-item reveal">
+        <% if (g.image) { %>
+        <img src="<%- url_for(g.image) %>" alt="<%= g.caption || '' %>" loading="lazy">
+        <% } %>
+        <% if (g.caption) { %><figcaption><%= g.caption %></figcaption><% } %>
+      </figure>
+      <% }) %>
+    </div>
+  </div>
+</section>

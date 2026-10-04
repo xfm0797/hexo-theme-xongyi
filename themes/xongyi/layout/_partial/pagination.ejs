@@ -1,0 +1,19 @@
+<%
+// 通用分页 partial（适用于 archive/category/tag 等带 page.posts 的页面）
+var base = url_for(page.path || '').replace(/\/$/, '');
+%>
+<% if (page.total > 1) { %>
+<nav class="pagination" aria-label="pagination">
+  <% if (page.prev > 0) { %>
+  <a class="pagination__item" href="<%- base === '' ? url_for('archives/') : (page.prev > 1 ? base + '/page/' + page.prev + '/' : base + '/') %>">
+    <%- icon('arrow-left') %><%= __('prev_page') %>
+  </a>
+  <% } %>
+  <span class="pagination__item pagination__current"><%= __('page_no', page.current) %></span>
+  <% if (page.next > 0) { %>
+  <a class="pagination__item" href="<%- base + '/page/' + page.next + '/' %>">
+    <%= __('next_page') %><%- icon('arrow-right') %>
+  </a>
+  <% } %>
+</nav>
+<% } %>

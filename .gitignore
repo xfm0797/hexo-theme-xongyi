@@ -1,0 +1,22 @@
+# Hexo
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy*/
+source/_drafts
+_multiconfig.yml
+.deploy_git
+
+# IDE & 平台
+.idea/
+.vscode/
+.vercel
+.netlify
+.wrangler
+
+# 系统
+*.swp
+*~

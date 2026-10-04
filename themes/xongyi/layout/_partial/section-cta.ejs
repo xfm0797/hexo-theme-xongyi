@@ -1,0 +1,11 @@
+<section class="cta-band" id="cta">
+  <div class="container cta-band__inner reveal">
+    <div>
+      <h2><%= theme.cta.title %></h2>
+      <% if (theme.cta.subtitle) { %><p><%= theme.cta.subtitle %></p><% } %>
+    </div>
+    <% if (theme.cta.button && theme.cta.button.name) { %>
+    <a class="btn btn--light" href="<%- url_for(theme.cta.button.url) %>"><%= theme.cta.button.name %><%- icon('arrow-right') %></a>
+    <% } %>
+  </div>
+</section>

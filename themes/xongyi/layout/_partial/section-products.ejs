@@ -1,0 +1,33 @@
+<section class="section" id="products">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2><%= theme.products.title %></h2>
+      <% if (theme.products.subtitle) { %><p><%= theme.products.subtitle %></p><% } %>
+    </div>
+    <div class="products__grid">
+      <% (theme.products.items || []).forEach(function (item) { %>
+      <a class="product-card reveal" href="<%- url_for(item.url || '#') %>">
+        <div class="product-card__cover">
+          <% if (item.image) { %>
+          <img src="<%- url_for(item.image) %>" alt="<%= item.title %>" loading="lazy">
+          <% } %>
+        </div>
+        <div class="product-card__body">
+          <% if (item.tags && item.tags.length) { %>
+          <div class="product-card__tags">
+            <% item.tags.forEach(function (t) { %><span><%= t %></span><% }) %>
+          </div>
+          <% } %>
+          <h3><%= item.title %></h3>
+          <p><%= item.desc %></p>
+        </div>
+      </a>
+      <% }) %>
+    </div>
+    <% if (theme.products.link && theme.products.link.name) { %>
+    <div class="section-more reveal">
+      <a class="btn btn--ghost" href="<%- url_for(theme.products.link.url) %>"><%= theme.products.link.name %><%- icon('arrow-right') %></a>
+    </div>
+    <% } %>
+  </div>
+</section>

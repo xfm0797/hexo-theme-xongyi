@@ -1,0 +1,33 @@
+en:
+  home: Home
+  read_more: Read more
+  view_all: View all
+  archives: Archives
+  categories: Categories
+  tags: Tags
+  prev_post: Previous
+  next_post: Next
+  prev_page: Previous
+  next_page: Next
+  page_no: Page %s
+  no_posts: No posts yet
+  skip_to_content: Skip to main content
+  powered_by: Powered by Hexo
+  theme_by: Theme Xongyi
+  dark_mode: Toggle dark mode
+  light_mode: Toggle light mode
+  back_to_top: Back to top
+  posted_on: Posted on
+  copyright: Copyright
+  contact_us: Contact us
+  address: Address
+  phone: Phone
+  email: Email
+  work_hours: Working hours
+  wechat: WeChat
+  your_name: Your name
+  your_email: Your email
+  your_message: Describe your needs
+  send: Send
+  toc: Table of contents
+  latest_posts: Latest posts
