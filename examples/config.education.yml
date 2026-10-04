@@ -1,0 +1,151 @@
+# ============================================================
+#  Xongyi 预设示例 — 教育版（education）
+#  用法: 将本文件内容覆盖 themes/xongyi/_config.yml
+# ============================================================
+
+preset: education
+
+brand:
+  name: "XX实验中学"
+  slogan: "厚德博学 · 笃行致远"
+  logo: "/images/logo.svg"
+  favicon: "/images/favicon.svg"
+
+menu:
+  - { name: "首页", url: "/" }
+  - { name: "学校概况", url: "/about/" }
+  - { name: "教育教学", url: "/products/" }
+  - { name: "校园动态", url: "/news/" }
+  - { name: "联系我们", url: "/contact/" }
+
+nav_button:
+  name: "招生咨询"
+  url: "/contact/"
+
+sections:
+  - hero
+  - quicklinks
+  - stats
+  - services
+  - news
+  - team
+  - gallery
+  - cta
+  - contact
+
+hero:
+  badge: "省示范性普通高级中学"
+  title: "立德树人<br><em>成就未来</em>"
+  subtitle: "建校六十余载，秉承『厚德博学、笃行致远』的校训，培养具有家国情怀与国际视野的时代新人。"
+  buttons:
+    - { name: "走进校园", url: "/about/", primary: true }
+    - { name: "招生简章", url: "/contact/" }
+  image: "/images/hero.svg"
+
+quicklinks:
+  title: "常用服务"
+  subtitle: "师生与家长快速入口"
+  items:
+    - { icon: "graduation", name: "招生信息", url: "/contact/" }
+    - { icon: "book-open", name: "课程资源", url: "/products/" }
+    - { icon: "calendar", name: "校历查询", url: "/news/" }
+    - { icon: "message-circle", name: "家校沟通", url: "/contact/" }
+
+stats:
+  items:
+    - { value: 1962, suffix: " 年", label: "建校时间" }
+    - { value: 86, suffix: "%", label: "重点本科率" }
+    - { value: 220, suffix: " 人", label: "教职工人数" }
+    - { value: 120, suffix: " 余项", label: "省级以上荣誉" }
+
+services:
+  title: "教育教学"
+  subtitle: "五育并举，全面发展"
+  items:
+    - { icon: "book", title: "课程体系", desc: "国家课程校本化实施，开设 30+ 选修课程。", url: "/products/" }
+    - { icon: "users", title: "名师队伍", desc: "特级教师领衔，正高级、骨干教师占比过半。", url: "/products/" }
+    - { icon: "target", title: "科研兴校", desc: "多项省级课题落地，以研促教、以教促学。", url: "/products/" }
+    - { icon: "heart", title: "阳光德育", desc: "志愿服务、社会实践，涵养学生品格。", url: "/products/" }
+    - { icon: "award", title: "社团活动", desc: "40+ 学生社团，人人有平台、个个能出彩。", url: "/products/" }
+    - { icon: "globe", title: "国际交流", desc: "与多国友好学校互访，拓展国际视野。", url: "/products/" }
+
+news:
+  title: "校园动态"
+  subtitle: "记录校园的每一个精彩瞬间"
+  count: 3
+  more:
+    name: "更多动态"
+    url: "/news/"
+
+team:
+  title: "名师风采"
+  subtitle: "学高为师，身正为范"
+  items:
+    - { name: "陈校长", role: "校长 / 特级教师", avatar: "/images/avatar.svg", desc: "省教育学会常务理事" }
+    - { name: "刘老师", role: "正高级教师", avatar: "/images/avatar.svg", desc: "省级学科带头人" }
+    - { name: "林老师", role: "高级教师", avatar: "/images/avatar.svg", desc: "市优秀班主任" }
+    - { name: "黄老师", role: "高级教师", avatar: "/images/avatar.svg", desc: "省优质课一等奖" }
+
+gallery:
+  title: "校园风光"
+  subtitle: "书香校园，环境育人"
+  items:
+    - { image: "/images/thumb-1.svg", caption: "教学楼" }
+    - { image: "/images/thumb-2.svg", caption: "实验中心" }
+    - { image: "/images/thumb-3.svg", caption: "体育馆" }
+    - { image: "/images/thumb-1.svg", caption: "图书馆" }
+
+cta:
+  title: "欢迎报考 XX 实验中学"
+  subtitle: "每年 5 月开放校园，期待与你相遇"
+  button:
+    name: "招生咨询"
+    url: "/contact/"
+
+contact:
+  title: "联系我们"
+  subtitle: "招生与咨询渠道"
+  address: "XX市XX区学府路88号"
+  phone: "0510-88888888"
+  email: "school@example.edu.cn"
+  hours: "工作日 8:00 - 17:30"
+  wechat: ""
+  form_action: ""
+  map: ""
+
+footer:
+  about: "XX实验中学创办于 1962 年，是省示范性普通高级中学、省文明校园。"
+  columns:
+    - title: "学校概况"
+      items:
+        - { name: "学校简介", url: "/about/" }
+        - { name: "校园动态", url: "/news/" }
+    - title: "师生服务"
+      items:
+        - { name: "教育教学", url: "/products/" }
+        - { name: "联系我们", url: "/contact/" }
+  copyright: "© 2026 XX实验中学"
+  icp: "苏ICP备00000000号"
+  icp_url: "https://beian.miit.gov.cn/"
+  police: ""
+  police_url: ""
+  show_powered: true
+
+social:
+  - { icon: "mail", url: "mailto:school@example.edu.cn" }
+
+features:
+  dark_mode: true
+  back_to_top: true
+  reveal: true
+  sticky_header: true
+  stats_animation: true
+
+seo:
+  description: "XX实验中学官方网站：学校概况、教育教学、招生信息、校园动态。"
+  keywords: "中学,招生,教育,示范高中"
+  jsonld: true
+
+analytics:
+  google: ""
+  cloudflare: ""

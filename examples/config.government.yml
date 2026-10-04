@@ -1,0 +1,131 @@
+# ============================================================
+#  Xongyi 预设示例 — 政务版（government）
+#  用法: 将本文件内容覆盖 themes/xongyi/_config.yml
+# ============================================================
+
+preset: government
+
+brand:
+  name: "XX市政务服务网"
+  slogan: "为民服务 · 便捷高效"
+  logo: "/images/logo.svg"
+  favicon: "/images/favicon.svg"
+
+menu:
+  - { name: "首页", url: "/" }
+  - { name: "政务公开", url: "/about/" }
+  - { name: "办事服务", url: "/products/" }
+  - { name: "通知公告", url: "/news/" }
+  - { name: "联系我们", url: "/contact/" }
+
+nav_button:
+  name: "政务服务入口"
+  url: "/contact/"
+
+sections:
+  - hero
+  - quicklinks
+  - stats
+  - services
+  - news
+  - cta
+  - contact
+
+hero:
+  badge: "XX市人民政府"
+  title: "政务服务<br><em>一站直达</em>"
+  subtitle: "深化『放管服』改革，推进『一网通办』，让数据多跑路、群众少跑腿，为您提供便捷高效的政务服务。"
+  buttons:
+    - { name: "办事指南", url: "/products/", primary: true }
+    - { name: "政务公开", url: "/about/" }
+  image: "/images/hero.svg"
+
+quicklinks:
+  title: "办事服务"
+  subtitle: "高频事项快速办理"
+  items:
+    - { icon: "file-text", name: "证照办理", url: "/contact/" }
+    - { icon: "search", name: "进度查询", url: "/contact/" }
+    - { icon: "download", name: "表格下载", url: "/about/" }
+    - { icon: "message-circle", name: "意见反馈", url: "/contact/" }
+
+stats:
+  items:
+    - { value: 1200, suffix: " 项", label: "网上可办事项" }
+    - { value: 98.5, suffix: "%", label: "群众满意率" }
+    - { value: 300, suffix: " 万+", label: "年办件量" }
+    - { value: 24, suffix: " 小时", label: "在线服务" }
+
+services:
+  title: "重点领域服务"
+  subtitle: "聚焦企业与群众高频办事需求"
+  items:
+    - { icon: "building", title: "企业开办", desc: "营业执照、刻章、税务、社保一站式办理。", url: "/products/" }
+    - { icon: "home", title: "不动产登记", desc: "登记、交易、缴税一窗受理、并联办理。", url: "/products/" }
+    - { icon: "users", title: "社保医保", desc: "参保登记、待遇申领、异地就医备案。", url: "/products/" }
+    - { icon: "graduation", title: "教育入学", desc: "义务教育招生报名与入学政策解读。", url: "/products/" }
+    - { icon: "shield-check", title: "公共安全", desc: "安全知识宣传与报警求助渠道指引。", url: "/products/" }
+    - { icon: "info", title: "政策解读", desc: "最新政策文件图文解读与权威发布。", url: "/news/" }
+
+news:
+  title: "通知公告"
+  subtitle: "官方发布 · 权威信息"
+  count: 3
+  more:
+    name: "更多公告"
+    url: "/news/"
+
+cta:
+  title: "12345 政务服务热线"
+  subtitle: "倾听您的声音，解决您的诉求，全天候为您服务"
+  button:
+    name: "联系我们"
+    url: "/contact/"
+
+contact:
+  title: "联系我们"
+  subtitle: "政务服务咨询与监督渠道"
+  address: "XX市XX区XX大道100号政务服务中心"
+  phone: "12345"
+  email: "zwfw@example.gov.cn"
+  hours: "工作日 9:00 - 17:00（12345 热线 7×24 小时）"
+  wechat: ""
+  form_action: ""
+  map: ""
+
+footer:
+  about: "XX市政务服务网，推进政务服务标准化、规范化、便利化，打造人民满意的服务型政府。"
+  columns:
+    - title: "政务公开"
+      items:
+        - { name: "政府信息公开", url: "/about/" }
+        - { name: "政策文件", url: "/news/" }
+    - title: "办事服务"
+      items:
+        - { name: "办事指南", url: "/products/" }
+        - { name: "联系我们", url: "/contact/" }
+  copyright: "© 2026 XX市人民政府办公室"
+  icp: "京ICP备00000000号"
+  icp_url: "https://beian.miit.gov.cn/"
+  police: "京公网安备 00000000000000号"
+  police_url: ""
+  show_powered: true
+
+social:
+  - { icon: "mail", url: "mailto:zwfw@example.gov.cn" }
+
+features:
+  dark_mode: true
+  back_to_top: true
+  reveal: true
+  sticky_header: true
+  stats_animation: true
+
+seo:
+  description: "XX市政务服务网：一网通办、便民服务、政务公开、通知公告。"
+  keywords: "政务服务,一网通办,办事指南,政务公开"
+  jsonld: true
+
+analytics:
+  google: ""
+  cloudflare: ""
