@@ -1,6 +1,7 @@
 # ============================================================
 #  Xongyi 预设示例 — 教育版（education）
-#  用法: 将本文件内容覆盖 themes/hexo-theme-xongyi/_config.yml
+#  用法: 将本文件内容覆盖主题的 _config.yml
+#        （主题仓库根目录 / 站点中的 themes/hexo-theme-xongyi/_config.yml）
 # ============================================================
 
 preset: education

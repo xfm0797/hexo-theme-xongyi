@@ -1,9 +1,0 @@
-# Netlify 部署配置 — Xongyi Theme
-# 仓库导入 Netlify 后自动读取本文件，无需在控制台额外配置。
-
-[build]
-  command = "npx hexo generate"
-  publish = "public"
-
-[build.environment]
-  NODE_VERSION = "20"

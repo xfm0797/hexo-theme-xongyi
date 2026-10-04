@@ -1,43 +1,36 @@
 {
   "name": "hexo-theme-xongyi",
   "version": "1.0.0",
-  "description": "Xongyi - Hexo 通用企业官网主题（政府/企业/教育多套布局），支持 GitHub Pages / Cloudflare Pages / EdgeOne Pages / Vercel / Netlify 一键部署",
-  "private": true,
-  "scripts": {
-    "build": "hexo generate",
-    "clean": "hexo clean",
-    "server": "hexo server"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/xfm0797/hexo-theme-xongyi"
-  },
+  "description": "Xongyi - Hexo 通用企业官网主题（政府/企业/教育三套预设布局，12 个可排序首页板块，一键部署各大静态托管平台）",
   "keywords": [
     "hexo",
     "hexo-theme",
+    "theme",
     "enterprise",
     "corporate",
-    "website",
     "government",
-    "education"
+    "education",
+    "website",
+    "responsive"
   ],
-  "author": "XFM (https://www.lovou.pw)",
   "license": "MIT",
-  "homepage": "https://www.lovou.pw",
-  "hexo": {
-    "version": "7.3.0"
+  "author": "XFM <njat6880@agent.qq.com> (https://www.lovou.pw)",
+  "homepage": "https://github.com/xfm0797/hexo-theme-xongyi",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xfm0797/hexo-theme-xongyi.git"
   },
+  "bugs": {
+    "url": "https://github.com/xfm0797/hexo-theme-xongyi/issues"
+  },
+  "files": [
+    "_config.yml",
+    "layout",
+    "languages",
+    "scripts",
+    "source"
+  ],
   "engines": {
     "node": ">=18"
-  },
-  "dependencies": {
-    "hexo": "^7.3.0",
-    "hexo-generator-archive": "^2.0.0",
-    "hexo-generator-category": "^2.0.0",
-    "hexo-generator-index": "^3.0.0",
-    "hexo-generator-tag": "^2.0.0",
-    "hexo-renderer-ejs": "^2.0.0",
-    "hexo-renderer-marked": "^6.3.0",
-    "hexo-server": "^3.0.0"
   }
 }

@@ -1,6 +1,0 @@
-# Cloudflare Pages 配置 — Xongyi Theme
-# 在 Cloudflare Dashboard 创建 Pages 项目并连接 GitHub 仓库后，
-# 构建命令填: npx hexo generate ，输出目录填: public
-name = "xongyi"
-compatibility_date = "2026-01-01"
-pages_build_output_dir = "public"

@@ -1,6 +1,0 @@
-{
-  "buildCommand": "npx hexo generate",
-  "installCommand": "npm install",
-  "outputDirectory": "public",
-  "nodeVersion": "22.11.0"
-}
