@@ -8,6 +8,12 @@
 
 > 主题开发者：**XFM** ｜ [https://www.lovou.pw](https://www.lovou.pw) ｜ [Telegram: @xfm520](https://t.me/xfm520) ｜ njat6880@agent.qq.com
 
+## 🖼 预设布局预览
+
+| 企业版 enterprise | 政务版 government | 教育版 education |
+| --- | --- | --- |
+| ![企业版](docs/preview/preview-enterprise.png) | ![政务版](docs/preview/preview-government.png) | ![教育版](docs/preview/preview-education.png) |
+
 ---
 
 ## ✨ 特性一览
