@@ -31,7 +31,7 @@ sections:
   - team
   - gallery
   - cta
-  - contact
+  - about-contact
 
 hero:
   badge: "省示范性普通高级中学"
@@ -68,6 +68,24 @@ services:
     - { icon: "heart", title: "阳光德育", desc: "志愿服务、社会实践，涵养学生品格。", url: "/products/" }
     - { icon: "award", title: "社团活动", desc: "40+ 学生社团，人人有平台、个个能出彩。", url: "/products/" }
     - { icon: "globe", title: "国际交流", desc: "与多国友好学校互访，拓展国际视野。", url: "/products/" }
+
+about-contact:
+  enable: true
+
+about:
+  title: "学校简介"
+  subtitle: "六秩薪火，弦歌不辍"
+  image: "/images/about.svg"
+  content: |
+    <p>XX实验中学创办于 1962 年，是省示范性普通高级中学、省文明校园，现有教学班 60 个，在校学生 3000 余人。</p>
+    <ul>
+      <li>特级教师 6 人，正高级教师 5 人</li>
+      <li>省级课程基地 3 个</li>
+      <li>连续十年获市教育教学质量金奖</li>
+    </ul>
+  link:
+    name: "走进校园"
+    url: "/about/"
 
 news:
   title: "校园动态"

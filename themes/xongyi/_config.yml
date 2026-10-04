@@ -38,21 +38,21 @@ nav_button:
 # ------------------------------------------------------------
 # 首页板块（按顺序渲染；删除某一行即可隐藏该板块）
 # 可用板块: hero / quicklinks / stats / services / about /
-#           products / news / team / partners / gallery / cta / contact
+#           products / news / team / partners / gallery / cta / contact /
+#           about-contact（关于我们 + 联系我们 左右合排）
 # ------------------------------------------------------------
 sections:
   - hero
   - quicklinks
   - stats
   - services
-  - about
   - products
   - news
   - team
   - partners
   - gallery
   - cta
-  - contact
+  - about-contact
 
 # ------------------------------------------------------------
 # hero 首屏横幅（title 支持 <em> 高亮与 <br> 换行）
@@ -105,7 +105,15 @@ services:
     - { icon: "settings", title: "运维支持", desc: "7×24 小时快速响应，保障业务连续运行。", url: "/products/" }
 
 # ------------------------------------------------------------
+# about-contact 关于我们 + 联系我们（左右合排）
+# 文案取自下方 about 与 contact 节点，此节点仅控制开关
+# ------------------------------------------------------------
+about-contact:
+  enable: true
+
+# ------------------------------------------------------------
 # about 关于我们（content 支持 HTML）
+# 说明：板块列表中的 about-contact 会左右合排展示本节点与下方 contact 节点的内容
 # ------------------------------------------------------------
 about:
   title: "关于我们"

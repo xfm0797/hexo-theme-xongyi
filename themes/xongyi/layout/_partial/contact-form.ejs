@@ -1,0 +1,16 @@
+<%# 留言表单（配置 contact.form_action 后生效） %>
+<form class="contact-form reveal" action="<%- theme.contact.form_action %>" method="POST">
+  <div class="form-row">
+    <label for="cf-name"><%= __('your_name') %></label>
+    <input id="cf-name" type="text" name="name" required>
+  </div>
+  <div class="form-row">
+    <label for="cf-email"><%= __('your_email') %></label>
+    <input id="cf-email" type="email" name="email" required>
+  </div>
+  <div class="form-row">
+    <label for="cf-message"><%= __('your_message') %></label>
+    <textarea id="cf-message" name="message" rows="4" required></textarea>
+  </div>
+  <button class="btn btn--primary" type="submit"><%= __('send') %><%- icon('send') %></button>
+</form>

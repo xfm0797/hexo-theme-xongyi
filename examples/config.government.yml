@@ -29,7 +29,7 @@ sections:
   - services
   - news
   - cta
-  - contact
+  - about-contact
 
 hero:
   badge: "XX市人民政府"
@@ -66,6 +66,24 @@ services:
     - { icon: "graduation", title: "教育入学", desc: "义务教育招生报名与入学政策解读。", url: "/products/" }
     - { icon: "shield-check", title: "公共安全", desc: "安全知识宣传与报警求助渠道指引。", url: "/products/" }
     - { icon: "info", title: "政策解读", desc: "最新政策文件图文解读与权威发布。", url: "/news/" }
+
+about-contact:
+  enable: true
+
+about:
+  title: "机构简介"
+  subtitle: "以人民为中心，建设服务型政府"
+  image: "/images/about.svg"
+  content: |
+    <p>XX市政务服务中心是市政府集中办理政务服务事项的综合平台，承担全市行政审批、公共服务事项的受理与办理。</p>
+    <ul>
+      <li>进驻部门 38 个，窗口 120 个</li>
+      <li>实现 1200 项事项“一网通办”</li>
+      <li>推行“一窗受理、集成服务、一次办结”</li>
+    </ul>
+  link:
+    name: "政务公开"
+    url: "/about/"
 
 news:
   title: "通知公告"
