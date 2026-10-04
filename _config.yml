@@ -1,7 +1,7 @@
 # ============================================================
 # Hexo 站点配置（Xongyi 主题演示站）
 # 主题文档: https://github.com/xfm0797/hexo-theme-xongyi
-# 主题配置文件: themes/xongyi/_config.yml
+# 主题配置文件: themes/hexo-theme-xongyi/_config.yml
 # ============================================================
 
 title: "Xongyi 演示站"
@@ -68,8 +68,8 @@ updated_option: "mtime"
 per_page: 6
 pagination_dir: "page"
 
-# 主题
-theme: "xongyi"
+# 主题（目录名遵循 Hexo 官方主题命名规范 hexo-theme-<name>）
+theme: "hexo-theme-xongyi"
 
 meta_generator: true
 

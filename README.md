@@ -60,14 +60,16 @@ npm run build     # 生成静态文件到 public/
 
 ```bash
 # 在站点根目录执行
-git clone https://github.com/xfm0797/hexo-theme-xongyi.git themes/xongyi
+git clone https://github.com/xfm0797/hexo-theme-xongyi.git themes/hexo-theme-xongyi
 ```
 
-站点 `_config.yml` 中设置 `theme: xongyi`，并把 `themes/xongyi/_config.yml` 中的配置按需修改即可。
+站点 `_config.yml` 中设置 `theme: hexo-theme-xongyi`，并把 `themes/hexo-theme-xongyi/_config.yml` 中的配置按需修改即可。
+
+> 目录名遵循 Hexo 官方主题命名规范 **`hexo-theme-<name>`**，主题自身的 `_config.yml`、`layout/`、`source/`、`scripts/`、`languages/` 全部独立收纳在该文件夹内，可直接复制到任意 Hexo 站点的 `themes/` 目录下使用。
 
 ## 🎨 切换预设布局
 
-编辑 `themes/xongyi/_config.yml` 第一项：
+编辑 `themes/hexo-theme-xongyi/_config.yml` 第一项：
 
 ```yaml
 preset: enterprise   # 企业（默认，商务蓝）
@@ -113,17 +115,19 @@ tag folder layers home info trending-up check check-circle arrow-right
 ## 📂 目录结构
 
 ```
-hexo-theme-xongyi/
-├── _config.yml                    # Hexo 站点配置
-├── themes/xongyi/
-│   ├── _config.yml                # ★ 主题配置（日常只需改这个文件）
-│   ├── layout/                    # EJS 布局
-│   │   └── _partial/              # 头部 / 页脚 / 12 个首页板块
-│   ├── scripts/icons.js           # 图标 helper
-│   ├── source/css|js|images/      # 样式、脚本与素材
-│   └── languages/                 # zh-CN / en 文案
+hexo-theme-xongyi/                 # 仓库根 = 完整 Hexo 演示站
+├── _config.yml                    # Hexo 站点配置（theme: hexo-theme-xongyi）
+├── themes/
+│   └── hexo-theme-xongyi/         # ★ 主题独立文件夹（Hexo 官方命名规范）
+│       ├── _config.yml            # ★ 主题配置（日常只需改这个文件）
+│       ├── layout/                # EJS 布局（layout.ejs / index / page / post / news / archive）
+│       │   └── _partial/          # 头部 / 页脚 / 滚动区块 / 首页 12 个板块
+│       ├── scripts/icons.js       # 图标 helper
+│       ├── source/css|js|images/  # 样式、脚本与素材
+│       └── languages/             # zh-CN / en 文案
 ├── source/                        # 演示站内容（页面与文章）
 ├── examples/                      # 政务 / 教育完整预设示例
+├── docs/                          # 预览图与部署按钮素材
 ├── .github/workflows/pages.yml    # GitHub Actions 自动部署
 ├── vercel.json / netlify.toml / edgeone.json / wrangler.toml
 └── README.md

@@ -14,7 +14,7 @@ excerpt: "以 Xongyi 主题为例，介绍 Hexo 主题开发的目录结构、EJ
 ## 目录组织
 
 ```
-themes/xongyi/
+themes/hexo-theme-xongyi/
 ├── _config.yml      # 主题配置（用户唯一需要关心的文件）
 ├── layout/          # EJS 布局与 partial
 │   └── _partial/    # 头部、页脚与首页各板块

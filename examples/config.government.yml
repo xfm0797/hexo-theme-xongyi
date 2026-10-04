@@ -1,6 +1,6 @@
 # ============================================================
 #  Xongyi 预设示例 — 政务版（government）
-#  用法: 将本文件内容覆盖 themes/xongyi/_config.yml
+#  用法: 将本文件内容覆盖 themes/hexo-theme-xongyi/_config.yml
 # ============================================================
 
 preset: government
